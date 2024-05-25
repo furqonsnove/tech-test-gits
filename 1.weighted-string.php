@@ -55,7 +55,7 @@ function weightedStrings($string, $queries)
 }
 
 // Contoh
-$string = "bbccc"; 
-$queries = [1, 3, 9, 4]; 
+$string = "abbcccd"; 
+$queries = [1, 3, 9, 8]; 
 $output = weightedStrings($string, $queries); 
 print_r($output); 
