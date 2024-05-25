@@ -29,11 +29,11 @@ function isBalanced($input)
         }
     }
 
-    // Determine stack is
+    // jika kosong maka seimbang
     return empty($stack) ? 'YES' : 'NO';
 }
 
-// Example Input 
+// Example Input dalam 3 string sekaligus dalam array
 $inputs = [
     "{ [ ( ) ] }",
     "{ [ ( ]) }",
