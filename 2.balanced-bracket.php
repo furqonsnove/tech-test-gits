@@ -1,6 +1,7 @@
 <?php
 
-function isBalanced($input) {
+function isBalanced($input)
+{
     // Peta untuk pasangan bracket
     $bracketPairs = [
         ')' => '(',
@@ -22,7 +23,7 @@ function isBalanced($input) {
         // Jika penutup
         elseif (in_array($char, [')', '}', ']'])) {
             // Cek kecocokan dengan bracket pair
-            if (empty($stack) ) {
+            if (empty($stack)  || array_pop($stack) != $bracketPairs[$char]) {
                 return 'NO';
             }
         }
@@ -43,5 +44,3 @@ foreach ($inputs as $input) {
     echo "Input: $input\n";
     echo "Output: " . isBalanced($input) . "\n\n";
 }
-
-?>
